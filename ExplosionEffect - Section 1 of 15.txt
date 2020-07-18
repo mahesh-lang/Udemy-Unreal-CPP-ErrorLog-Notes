@@ -1,0 +1,11 @@
+Section 1 of 15. Introduction and Set up. 
+
+Activity - Explosion happens when player shoots. 
+
+C:\Users\User\Documents\Unreal Projects\UdemyCPPGame\Source\UdemyCPPGame\UdemyCPPGameProjectile.cpp(46): error C2352: 'UObject::GetWorld': illegal call of non-static member function
+1>  C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/Object.h(556): note: see declaration of 'UObject::GetWorld'
+1>C:\Users\User\Documents\Unreal Projects\UdemyCPPGame\Source\UdemyCPPGame\UdemyCPPGameProjectile.cpp(46): error C2065: 'ExplosionEffect': undeclared identifier
+1>C:\Users\User\Documents\Unreal Projects\UdemyCPPGame\Source\UdemyCPPGame\UdemyCPPGameProjectile.cpp(46): error C3861: 'GetActorLocation': identifier not found
+1>C:\Users\User\Documents\Unreal Projects\UdemyCPPGame\Source\UdemyCPPGame\UdemyCPPGameProjectile.cpp(46): error C2761: 'SpawnEmitterAtLocation': redeclaration of member is not allowed
+
+Solution - Cross checked the code. There was a mistake in parenthesis scope. 
