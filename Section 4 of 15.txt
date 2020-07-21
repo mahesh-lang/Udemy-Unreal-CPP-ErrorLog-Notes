@@ -1,0 +1,91 @@
+Stealth Game 3
+AI Guards
+
+We will put some AI guards around the objective item, these guards will be difficulty 
+for the player to pick the objective. 
+AI will be able to see the players and listen to voices. 
+To give the player a chance to win, we will code a distraction mechanics to use against 
+the guards. 
+You make them move away by bouncing the weapons projectile against the wall triggering the
+noise.
+
+Use simple AI to create an obstacle for the player to overcome. 
+Code a distraction mechanic. 
+
+======================================================================
+
+24. Create a AI guard class. 
+
+Derived from Parent class - Character. because the character class have meshes in it which will be use-
+ful. Have mesh, Componenet and built in movement logic.  
+
+Create new blueprint class. - derived from FPSAIGuard class. 
+
+Set up Pawn Sensing component in a code- to hear and see the player and noise we will
+be creating with the projectile. 
+
+Since first time using AI - go into GameBuild.cs and add AI module. 
+
+====================================================================
+
+25. Setup Sight sense. 
+
+Change all hearing, line of sight, radius settings in BP_Guard in viewport.
+two events - On see pawn, on hear noise. 
+
+//If the pawn sees another player or the AI, the game is over immediately.  
+
+ame\private\fpsaiguard.cpp(31): error C4706: assignment within conditional expression
+
+==============================================================================
+
+26. Setup the hearing sense. 
+
+to make pawn hear noises - Add a noise emmiter component. 
+
+Whenever player is seen by the guard, it will no longer use the noise. 
+Whenever player gets out of the line of sight of the guard, the green players will start to appear. 
+
+
+====================================================================================
+
+27. Add noise making to projectile. 
+
+When player shoots, green sphere will appear, given that player shoots in the hearing range of dwarf. 
+
+==========================================================================================
+
+28. Setup Guard Distraction. 
+
+Adding distraction to the guard. 
+Add some instructions to the guard. 
+We rotate the guard to the location where we heard the voice from. So we have to rotate the whole
+actor when we hear the noise. 
+For that use the function - lookAtRotation. 
+We are passing the vector and converting the vector into rotator. 
+	FRotationMatrix::MakeFromX(X).Rotator(); 
+(X) is actually a direction vector. Location is unit vector. (just a location, not a direction yet.) So we have to convert that into direction. 
+we do that by generating vector map by subtracting location from origin(Actor location)
+
+
+Turn this guard into its original rotation after certain amount of seconds have passed. 
+- remember the original rotation 
+- set timer to return to remembered rotation. 
+
+==========================================================================================
+
+29. Add Game-Over trigger when spotted.
+	And also move the camera away. 
+
+If the player gets the objective item to the extraction box by distracting the dwarf, "Mission Complete!" message will be displayed on the screen. 
+Otherwise, if the player comes in line of sight of dwarf "Game Over!" will be displayed on the screen. 
+
+This is done by creating binding on the text "Mission Complete" and desiging the blueprint accordingly. 
+
+=============================================================================================
+
+30. Add 3D UI state above guard. 
+Whenever dwarf is suspicious of the player, we want to add question mark, whenever he sees the player, we want to exclamation mark.
+
+
+ 
