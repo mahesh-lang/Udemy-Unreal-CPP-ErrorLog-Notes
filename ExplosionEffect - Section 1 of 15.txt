@@ -10,8 +10,6 @@ C:\Users\User\Documents\Unreal Projects\UdemyCPPGame\Source\UdemyCPPGame\UdemyCP
 
 Solution - Cross checked the code. There was a mistake in parenthesis scope. 
 
-Notes - 
-
 Hot keys for Visual Assist - 
 
 Alt+shift+O - Open file in solution

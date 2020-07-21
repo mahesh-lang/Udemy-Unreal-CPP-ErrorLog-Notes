@@ -1,0 +1,33 @@
+Setup the template project
+Create a new C++ class. 
+Setup Actor Components.
+
+Errors 
+C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Public\FPSObjectiveActor.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+1>C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Public\FPSObjectiveActor.h(28): error C2238: unexpected token(s) preceding ';'
+1>C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Public\FPSObjectiveActor.h(12): error C2039: 'SphereComp': is not a member of 'AFPSObjectiveActor'
+1>  C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Public\FPSObjectiveActor.h(10): note: see declaration of 'AFPSObjectiveActor'
+1>C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Public\FPSObjectiveActor.h(12): error C2618: illegal member designator in offsetof
+1>  C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Public\FPSObjectiveActor.h(12): note: offsetof has a builtin meaning; use /Zc:offsetof- to revert to old, non-conforming definition
+1>C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Private\FPSObjectiveActor.cpp(16): error C2065: 'SphereComp': undeclared identifier
+1>C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Private\FPSObjectiveActor.cpp(16): error C2143: syntax error: missing ')' before ';'
+1>C:\Users\User\Downloads\StealthGameTemplate417\Source\FPSGame\Private\FPSObjectiveActor.cpp(17): error C2065: 'SphereComp': undeclared identifier
+
+Solution - tell compiler that USphereComponent is a class by early declaration. 
+
+
+Setup collision and overlap event. 
+- Disable collision on the mesh component with C++
+Pickup Objective Actor.
+
+Setup objective UI with UMG - 
+
+ We have an objective to look for, we will pickup that 
+objective,and then extract it. The respective message will be displayed on the scree. 
+
+Challenge - Create a black hole
+
+In this, we are creating a blackhole, which will suck any physically simulated object
+(cubes) into it.
+
+select all the cubes and set generate overlap defense to true. 

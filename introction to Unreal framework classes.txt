@@ -1,0 +1,21 @@
+Source - http://www.tomlooman.com/ue4-gameplay-framework/
+
+Classes - 
+
+1. Actor
+ base for any object in your level including players, AI enemies, doors, walls, and gameplay objects
+
+built-up using ActorComponents, StaticMeshComponent, CharacterMovementComponent, ParticleComponent etc.
+
+Actor is the class you can network replicate (for multiplayer) and is easily done by calling SetReplicates(true) in your constructor
+
+Damage can be applied directly to the Actor using MyActor->TakeDamage(…) or via UGameplayStatics::ApplyDamage(…)
+
+
+Functions to use within context of the Actor. -
+BeginPlay
+Tick
+EndPlay
+GetComponentByClass 
+GetActorLocation
+GetOverlappingActors

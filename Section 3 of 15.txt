@@ -1,0 +1,23 @@
+Stealth Game 2 - GameMode Rules. 
+Game rules to handle - 
+Mission Complete
+Game over 
+
+The goal for the player is to bring the object we created in previous section to an 
+extraction zone we will create in this section. 
+When the object has been delivered, the mission is complete and we will display this message 
+to the player on the screen. 
+
+create extraction zone. 
+Polish Extraction zone. 
+
+Setup Mission End. 
+
+Add Extraction feedback. 
+
+If we directly enter the extraction zone, then set up a sound which will indicate that. 
+
+Setup post mission Camera. 
+
+When game completes we want to move the camera away from the first person view into
+third person view. (Both blueprint and C++ implementation.)
